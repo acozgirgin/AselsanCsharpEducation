@@ -1,6 +1,7 @@
 ﻿
 
 using System;
+using System.Collections.Generic;
 
 namespace AselsanCsharpEducation
 {
@@ -32,6 +33,12 @@ namespace AselsanCsharpEducation
             string rowProductName = "name:{0}";
             Console.WriteLine(rowProductName, MyNumber);
 
+
+            //Git change gorunecek mi --> Pushlanacak
+            Random rnd = new Random();
+            var x = new List<int>(256);
+            for (int i = 0; i < x.Capacity; ++i) { x.Add(rnd.Next(100)); }
+            foreach (int i in x) Console.WriteLine(i);
 
 
 
