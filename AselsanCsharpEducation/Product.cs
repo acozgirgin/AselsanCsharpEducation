@@ -8,43 +8,40 @@ namespace AselsanCsharpEducation
 {
     internal class Product
     {
+        public string Name { get; set; } // instance property
 
-        //Field --> getter setter yazmadıgınız degiskenler
+        public decimal Price { get; private set; } // kullanıcının price set etmesini istemiyorum. -> private set
 
+        public static int Tax { get; set; } = 20; // static field
 
-        //Property 1 
-        internal int Id { get; set; }
-
-        //Property 2
-
-        //Getter ve setter methodları asagidaki gibi ozellestirebiliriz.
-        private string _name;
-        internal string Name 
-        {
-            get => _name;
-
-            set
-            {
-                if (value.Length <= 6)
-                {
-                    throw new Exception(" Name length is less than 6 characters ! ");
-                }
-
-                _name = value;
-            } 
         
-        }
 
-        internal decimal Price { get; set; }
+        //Instance constructor
+        //Her instance alindiginda calisir.
 
-
-        public Product(int Id, string Name, decimal Price)
+        public Product()
         {
-
-            this.Id = Id;
-            this.Name = Name;
-            this.Price = Price;
-
+            
         }
+
+        //Productstan ilk nese ornegi alindiginda calisir -> ( bir kere )
+        //Static constructor
+        static Product()
+        {
+            //Uygulama ilk calistigi anda calismasini istedigimiz constructor.
+            //Ilk alinan ornekten sonra calismaz !!
+        }
+
+        public void SetPrice(decimal price) => this.Price = price;  
+
+        //Static method
+        public static int Calculate(int a, int b)
+        {
+            return a + b;
+        }
+
+
+
+
     }
 }
