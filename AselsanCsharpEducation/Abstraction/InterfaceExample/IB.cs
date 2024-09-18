@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AselsanCsharpEducation
+namespace AselsanCsharpEducation.Abstraction.InterfaceExample
 {
-    public static class StaticProduct
+    internal interface IB
     {
 
-        public static int Id { get; set; }
+        public int Add(int a, int b);
+
+
     }
 }
