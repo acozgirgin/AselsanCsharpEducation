@@ -32,6 +32,7 @@ namespace AselsanCsharpEducation
             CollectionLesson example = new CollectionLesson();
             example.HashSetExample();
 
+
             Console.ReadKey();  
 
         }

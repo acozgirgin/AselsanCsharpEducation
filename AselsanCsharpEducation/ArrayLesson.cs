@@ -55,10 +55,7 @@ namespace AselsanCsharpEducation
                 Console.WriteLine(item);    
             }
 
-            
-
-            
-
+                       
         }
         public void HasTableExample()
         {
